@@ -1,0 +1,33 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:#0a0a0a; color:#fff; }
+.container { max-width:1280px; margin:0 auto; padding:0 15px; }
+
+header { background:linear-gradient(135deg,#000,#004d00); padding:25px 0; text-align:center; }
+.logo { height:70px; margin-bottom:10px; border-radius:50%; }
+h1 { font-size:3rem; margin-bottom:8px; color:#00ff9d; text-shadow:0 0 10px #00ff9d; }
+.tagline { color:#00ff9d; font-size:1.2rem; font-weight:bold; }
+
+.countdown-container { background:#001a00; padding:25px 0; text-align:center; border-bottom:3px solid #00ff9d; }
+#next-match { font-size:1.5rem; margin-bottom:10px; color:#00ff9d; }
+#countdown { font-size:3.5rem; font-weight:bold; color:#00ff9d; letter-spacing:5px; }
+
+.player-container { margin:30px 0; position:relative; padding-bottom:56.25%; background:#000; border-radius:15px; overflow:hidden; box-shadow:0 0 30px rgba(0,255,157,0.4); }
+#stream-frame { position:absolute; top:0; left:0; width:100%; height:100%; border:none; }
+
+.quality-buttons { text-align:center; margin:20px 0; }
+.quality-buttons button { background:#00ff9d; color:#000; border:none; padding:12px 25px; margin:0 8px; border-radius:8px; font-weight:bold; cursor:pointer; transition:0.3s; }
+.quality-buttons button:hover { background:#00cc7a; transform:scale(1.05); }
+
+.schedule h2 { text-align:center; margin:40px 0 20px; color:#00ff9d; font-size:2rem; }
+.match-card { background:#001a00; padding:18px; margin:12px 0; border-radius:12px; display:flex; justify-content:space-between; align-items:center; cursor:pointer; transition:0.3s; border:2px solid transparent; }
+.match-card:hover { background:#00ff9d; color:#000; border-color:#000; transform:translateY(-3px); }
+.match-card .time { font-weight:bold; color:#00ff9d; }
+.match-card:hover .time { color:#000; }
+
+footer { background:#000; padding:30px; text-align:center; margin-top:60px; border-top:3px solid #00ff9d; }
+
+@media (max-width:768px) {
+    h1 { font-size:2.2rem; }
+    #countdown { font-size:2.5rem; }
+    .quality-buttons button { padding:10px 18px; margin:5px; }
+}
