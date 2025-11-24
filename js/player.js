@@ -1,11 +1,11 @@
 // မင်းပွဲရဲ့ တကယ့် ID တွေ ထည့်ပြီး သုံးပါ
 const streams = [
+    "https://hoofootay4.spotlightmoment.com/embed/HEIcKcgh1MB8F"
     "https://multiembed.eu/embed/12345678",           // အဓိက
     "https://footybite.to/embed/12345678",            // backup 1
     "https://sportsurge.net/embed/12345678",          // backup 2
     "https://stream2watch.io/embed/soccer/12345678",  // backup 3
     "https://ronaldo7.net/embed/12345678"             // backup 4
-    "https://hoofootay4.spotlightmoment.com/embed/HEIcKcgh1MB8F"
 ];
 
 let currentStream = 0;
