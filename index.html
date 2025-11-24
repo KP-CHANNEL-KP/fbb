@@ -1,46 +1,47 @@
 <!DOCTYPE html>
-<html lang="my">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KP SPORTS - အမြန်ဆုံး ဘောလုံး Live</title>
+    <meta name="description" content="KP SPORTS - Watch Football Live Streaming HD Free Myanmar">
+    <title>KP SPORTS | Live Football HD Streaming</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="assets/kp.png">
-    <link href="https://fonts.googleapis.com/css2?family=Pyidaungsu:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/logo.png">
 </head>
 <body>
+    <header>
+        <div class="container">
+            <img src="assets/logo.png" alt="KP SPORTS" class="logo">
+            <h1>KP SPORTS</h1>
+            <p>ဘောလုံးပွဲအားလုံး တိုက်ရိုက်ကြည့်ပါ • HD အခမဲ့ • အမြန်ဆုံး</p>
+        </div>
+    </header>
 
-<div class="header-glow">
-    <img src="assets/kp.png" alt="KP" class="logo">
-    <h1>KP SPORTS</h1>
-    <p>မြန်မာမှာ အမြန်ဆုံး • အချောဆုံး • အမိုက်ဆုံး</p>
-</div>
+    <div class="live-now" id="live-now">LIVE NOW</div>
 
-<div class="live-fire">🔥 LIVE လွှင့်နေဆဲ 🔥</div>
-
-<div class="player-box">
-    <iframe id="player" src="" allowfullscreen allow="autoplay"></iframe>
-    <div class="loading-screen" id="loading">
-        <div class="spinner"></div>
-        <p>လိုင်းချိတ်နေပါသည်...</p>
+    <div class="player-wrapper container">
+        <div class="player-box">
+            <iframe id="stream" src="" allowfullscreen allow="autoplay"></iframe>
+            <div class="loading" id="loading">ခဏစောင့်ပါ... လိုင်းချိတ်နေပါသည်...</div>
+        </div>
+        <div class="controls">
+            <button onclick="nextStream()">Next Stream</button>
+            <button onclick="reloadStream()">Reload</button>
+            <span id="status">Stream 1/5</span>
+        </div>
     </div>
-</div>
 
-<div class="super-buttons">
-    <button class="glow-btn" onclick="nextStream()">NEXT LINE</button>
-    <button class="glow-btn red" onclick="reloadStream()">RELOAD</button>
-    <div class="line-count" id="count">Line 1/6</div>
-</div>
+    <div class="schedule container">
+        <h2>ဒီနေ့ပွဲစဉ်</h2>
+        <div id="matches"></div>
+    </div>
 
-<div class="match-list">
-    <h2>ဒီနေ့ ပွဲစဉ်</h2>
-    <div id="matches"></div>
-</div>
+    <footer>
+        <div class="container">
+            <p>© 2025 KP SPORTS • Myanmar No.1 Football Streaming</p>
+        </div>
+    </footer>
 
-<footer>
-    <p>© 2025 KP SPORTS — မြန်မာမှာ တကယ် နံပါတ် ၁</p>
-</footer>
-
-<script src="js/app.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
