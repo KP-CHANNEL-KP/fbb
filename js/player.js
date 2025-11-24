@@ -5,6 +5,7 @@ const streams = [
     "https://sportsurge.net/embed/12345678",          // backup 2
     "https://stream2watch.io/embed/soccer/12345678",  // backup 3
     "https://ronaldo7.net/embed/12345678"             // backup 4
+    "https://hoofootay4.spotlightmoment.com/embed/HEIcKcgh1MB8F"
 ];
 
 let currentStream = 0;
