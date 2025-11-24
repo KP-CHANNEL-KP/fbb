@@ -3,45 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="KP SPORTS - Watch Football Live Streaming HD Free Myanmar">
-    <title>KP SPORTS | Live Football HD Streaming</title>
+    <title>KP SPORTS - Myanmar No.1 Football Live</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/logo.png">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <img src="assets/logo.png" alt="KP SPORTS" class="logo">
-            <h1>KP SPORTS</h1>
-            <p>ဘောလုံးပွဲအားလုံး တိုက်ရိုက်ကြည့်ပါ • HD အခမဲ့ • အမြန်ဆုံး</p>
-        </div>
-    </header>
 
-    <div class="live-now" id="live-now">LIVE NOW</div>
+<header>
+    <img src="assets/logo.png" alt="KP" class="logo">
+    <h1>KP SPORTS</h1>
+    <p>ဘောလုံးပွဲအားလုံး တိုက်ရိုက်ကြည့်ပါ • HD အခမဲ့ • အမြန်ဆုံး</p>
+</header>
 
-    <div class="player-wrapper container">
-        <div class="player-box">
-            <iframe id="stream" src="" allowfullscreen allow="autoplay"></iframe>
-            <div class="loading" id="loading">ခဏစောင့်ပါ... လိုင်းချိတ်နေပါသည်...</div>
-        </div>
-        <div class="controls">
-            <button onclick="nextStream()">Next Stream</button>
-            <button onclick="reloadStream()">Reload</button>
-            <span id="status">Stream 1/5</span>
-        </div>
+<div class="live-badge">LIVE NOW</div>
+
+<div class="player-container">
+    <iframe id="stream" src="" allowfullscreen allow="autoplay"></iframe>
+    <div class="overlay" id="overlay">
+        <div class="loading">လိုင်းချိတ်နေပါသည်...</div>
     </div>
+</div>
 
-    <div class="schedule container">
-        <h2>ဒီနေ့ပွဲစဉ်</h2>
-        <div id="matches"></div>
-    </div>
+<div class="controls">
+    <button class="btn neon" onclick="nextStream()">
+        <span>Next Stream</span>
+    </button>
+    <button class="btn neon" onclick="reloadStream()">
+        <span>Reload</span>
+    </button>
+    <div class="status" id="status">Stream 1/5</div>
+</div>
 
-    <footer>
-        <div class="container">
-            <p>© 2025 KP SPORTS • Myanmar No.1 Football Streaming</p>
-        </div>
-    </footer>
+<div class="schedule">
+    <h2>ဒီနေ့ပွဲစဉ်</h2>
+    <div id="matches"></div>
+</div>
 
-    <script src="js/main.js"></script>
+<footer>
+    <p>© 2025 KP SPORTS • Myanmar No.1 Football Streaming</p>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
