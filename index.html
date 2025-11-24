@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KP SPORTS - Live Football Streaming HD</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <img src="assets/logo.png" alt="KP SPORTS" class="logo">
+        <h1>KP SPORTS</h1>
+        <p class="tagline">Watch Every Match Live • HD Quality • 100% Free</p>
+    </div>
+</header>
+
+<div class="countdown-container">
+    <div class="container">
+        <h2 id="next-match">Loading next match...</h2>
+        <div id="countdown">00:00:00</div>
+    </div>
+</div>
+
+<div class="player-container container">
+    <div id="player">
+        <iframe id="stream-frame" src="" allowfullscreen allow="autoplay; encrypted-media"></iframe>
+    </div>
+    <div class="quality-buttons">
+        <button onclick="changeQuality('hd')">HD</button>
+        <button onclick="changeQuality('sd')">SD</button>
+        <button onclick="changeQuality('low')">Low</button>
+    </div>
+</div>
+
+<div class="schedule container">
+    <h2>Today's Matches</h2>
+    <div id="match-list"></div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>© 2025 KP SPORTS • All Rights Reserved • Contact: kpsports@gmail.com</p>
+    </div>
+</footer>
+
+<script src="js/player.js"></script>
+<script src="js/schedule.js"></script>
+</body>
+</html>
