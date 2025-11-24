@@ -1,74 +1,72 @@
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: 'Pyidaungsu', sans-serif; background:#000; color:#fff; overflow-x:hidden; }
+body { background:#000; color:#fff; font-family:'Pyidaungsu',sans-serif; overflow-x:hidden; }
 
-header { background:linear-gradient(135deg,#001a00,#004d00); padding:20px 0; text-align:center; }
-.logo { height:90px; border-radius:50%; border:4px solid #00ff9d; box-shadow:0 0 20px #00ff9d; }
-h1 { font-size:3.2rem; background:linear-gradient(90deg,#00ff9d,#00cc7a); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin:10px 0; }
-header p { color:#00ff9d; font-weight:bold; font-size:1.3rem; }
+.header-glow {
+    background:linear-gradient(135deg,#000,#001100);
+    text-align:center;
+    padding:25px 15px;
+    border-bottom:5px solid #00ff9d;
+    position:relative;
+    overflow:hidden;
+}
+.header-glow::before {
+    content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%;
+    background:radial-gradient(circle,rgba(0,255,157,0.3),transparent);
+    animation:rotate 20s linear infinite;
+}
+@keyframes rotate { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
 
-.live-badge { background:#c00; color:#fff; text-align:center; padding:12px; font-weight:bold; font-size:1.4rem; animation:pulse 2s infinite; }
-@keyframes pulse { 0%,100% {opacity:1} 50% {opacity:0.8} }
+.logo { height:100px; border-radius:50%; border:5px solid #00ff9d; box-shadow:0 0 40px #00ff9d; animation:pulse 2s infinite; }
+@keyframes pulse { 0%,100%{box-shadow:0 0 40px #00ff9d} 50%{box-shadow:0 0 60px #00ff9d} }
 
-/* 9:16 Full Mobile View */
-.player-container { 
-    position:relative; 
-    width:100vw; 
-    height:calc(100vw * 16/9); 
-    max-height:90vh; 
-    background:#000; 
-    margin:15px 0; 
-    border-radius:18px; 
-    overflow:hidden; 
-    box-shadow:0 0 40px #00ff9d60;
-}
-#stream { position:absolute; top:0; left:0; width:100%; height:100%; border:none; }
-.overlay { position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); display:flex; align-items:center; justify-content:center; }
-.loading { font-size:1.8rem; color:#00ff9d; animation:blink 1.5s infinite; }
-@keyframes blink { 0%,100% {opacity:1} 50% {opacity:0.5} }
+h1 { font-size:4rem; background:linear-gradient(90deg,#00ff9d,#00cc7a,#00ff9d); -webkit-background-clip:text; -webkit-text-fill-color:transparent; text-shadow:0 0 20px #00ff9d; }
+.header-glow p { color:#00ff9d; font-size:1.4rem; font-weight:900; }
 
-/* Super Beautiful Buttons */
-.controls { text-align:center; padding:20px; background:#000; }
-.btn { 
-    background:transparent; 
-    border:3px solid #00ff9d; 
-    color:#00ff9d; 
-    padding:16px 32px; 
-    margin:0 12px; 
-    border-radius:50px; 
-    font-weight:bold; 
-    font-size:1.2rem; 
-    cursor:pointer; 
-    position:relative; 
-    overflow:hidden; 
-    transition:all 0.4s;
+.live-fire {
+    background:#c00; color:#fff; text-align:center; padding:15px; font-size:1.6rem; font-weight:900;
+    animation:fire 1.5s infinite; letter-spacing:3px;
 }
-.btn span { position:relative; z-index:2; }
-.btn::before { 
-    content:''; 
-    position:absolute; 
-    top:0; left:-100%; 
-    width:100%; height:100%; 
-    background:linear-gradient(90deg,transparent,#00ff9d,transparent); 
-    transition:all 0.6s;
-}
-.btn:hover::before { left:100%; }
-.btn:hover { 
-    color:#000; 
-    background:#00ff9d; 
-    box-shadow:0 0 30px #00ff9d; 
-    transform:scale(1.1);
-}
-.status { margin-top:15px; color:#00ff9d; font-weight:bold; font-size:1.3rem; }
+@keyframes fire { 0%,100%{transform:scale(1)} 50%{transform:scale(1.05)} }
 
-.schedule { padding:20px; }
-.schedule h2 { text-align:center; color:#00ff9d; font-size:2rem; margin-bottom:20px; }
-.match { 
-    background:linear-gradient(135deg,#001a00,#003300); 
-    padding:18px; 
-    margin:12px 0; 
-    border-radius:15px; 
-    border-left:6px solid #00ff9d; 
-    font-size:1.2rem;
-    box-shadow:0 5px 15px rgba(0,255,157,0.2);
+.player-box {
+    position:relative; width:100vw; height:calc(100vw * 16/9); max-height:92vh;
+    margin:10px 0; overflow:hidden; border-radius:20px;
+    box-shadow:0 0 50px #00ff9d, inset 0 0 30px #000;
 }
-footer { text-align:center; padding:30px; background:#000; border-top:4px solid #00ff9d; font-size:1.1rem; color:#00ff9d; }
+#player { width:100%; height:100%; border:none; }
+
+.loading-screen {
+    position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px;
+}
+.spinner {
+    width:80px; height:80px; border:8px solid #333; border-top:8px solid #00ff9d;
+    border-radius:50%; animation:spin 1s linear infinite;
+}
+@keyframes spin { to{transform:rotate(360deg)} }
+
+.super-buttons {
+    text-align:center; padding:20px; background:#000;
+}
+.glow-btn {
+    background:#000; color:#00ff9d; border:3px solid #00ff9d; padding:18px 40px;
+    margin:0 15px; border-radius:50px; font-size:1.4rem; font-weight:900;
+    box-shadow:0 0 30px #00ff9d; transition:all 0.3s; position:relative; overflow:hidden;
+}
+.glow-btn::before {
+    content:''; position:absolute; top:0; left:-100%; width:100%; height:100%;
+    background:linear-gradient(90deg,transparent,#00ff9d,transparent); transition:0.7s;
+}
+.glow-btn:hover::before { left:100%; }
+.glow-btn:hover { background:#00ff9d; color:#000; transform:scale(1.15); box-shadow:0 0 50px #00ff9d; }
+.glow-btn.red { border-color:#ff0066; color:#ff0066; box-shadow:0 0 30px #ff0066; }
+.glow-btn.red:hover { background:#ff0066; color:#fff; }
+
+.line-count { margin-top:15px; font-size:1.5rem; color:#00ff9d; font-weight:900; }
+
+.match-list { padding:20px; }
+.match-list h2 { text-align:center; color:#00ff9d; font-size:2.2rem; margin-bottom:25px; text-shadow:0 0 15px #00ff9d; }
+.match { background:linear-gradient(135deg,#001100,#002200); padding:20px; margin:15px 0;
+    border-radius:18px; border-left:8px solid #00ff9d; font-size:1.3rem; box-shadow:0 8px 20px rgba(0,255,157,0.3); }
+
+footer { text-align:center; padding:30px; background:#000; border-top:5px solid #00ff9d; font-size:1.3rem; color:#00ff9d; font-weight:900; }
